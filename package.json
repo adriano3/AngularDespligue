@@ -9,7 +9,7 @@
     "test": "ng test",
     "build:dev": "ng build --configuration=dev",
     "build:qa": "ng build --configuration=qa",
-    "build:prod": "ng build --configuration=production"
+    "build:prod": "ng build --configuration=prod"
   },
   "private": true,
   "dependencies": {

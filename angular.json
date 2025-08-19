@@ -32,7 +32,7 @@
             "scripts": []
           },
           "configurations": {
-            "production": {
+            "prod": {
               "budgets": [
                 {
                   "type": "initial",
@@ -82,7 +82,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "AngularDespliegue:build:production"
+              "buildTarget": "AngularDespliegue:build:prod"
             },
             "qa": {
               "buildTarget": "AngularDespliegue:build:qa"
