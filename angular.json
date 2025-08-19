@@ -88,10 +88,10 @@
               "buildTarget": "AngularDespliegue:build:qa"
             },
             "dev": {
-              "buildTarget": "AngularDespliegue:build:development"
+              "buildTarget": "AngularDespliegue:build:dev"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "dev"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n"
