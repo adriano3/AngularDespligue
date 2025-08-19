@@ -1,0 +1,21 @@
+{
+  "projects": {
+    "default": "proyectoangular-ce3f0"
+  },
+  "targets": {
+    "proyectoangular-ce3f0": {
+      "hosting": {
+        "prod": [
+          "proyectoangular-ce3f0"
+        ],
+        "qa": [
+          "proyectoangular-ce3f0-qa"
+        ],
+        "dev": [
+          "proyectoangular-ce3f0-dev"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
