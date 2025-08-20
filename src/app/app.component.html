@@ -1,3 +1,5 @@
+<!-- Archivo: src/app/app.component.html -->
+
 <main class="container mx-auto p-8 font-inter">
   <!-- Encabezado y sección principal -->
   <header class="text-center mb-12">
@@ -10,22 +12,26 @@
     </p>
   </header>
 
-  <!-- Sección de Imágenes de Alta Resolución -->
+  <!-- Sección de Imágenes Optimizadas -->
   <section class="mb-12">
     <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 pb-2">
-      Imágenes de Alta Resolución
+      Imágenes Optimizadas
     </h2>
     <p class="text-lg text-gray-700 mb-4">
-      Las siguientes imágenes no han sido optimizadas para la web. Observa
-      su gran tamaño de archivo.
+      Las imágenes han sido optimizadas para la web, utilizando el formato WebP y carga diferida, pero manteniendo su tamaño original.
     </p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- MEJORA: Uso de la etiqueta <picture> y loading="lazy" -->
       <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-        <img
-          class="w-full"
-          src="assets/beach.jpg"
-          alt="Vista aérea de una playa tropical"
-        />
+        <picture>
+          <source srcset="assets/beach.webp" type="image/webp">
+          <img
+            class="w-full"
+            src="assets/beach.jpg"
+            alt="Vista aérea de una playa tropical"
+            loading="lazy"
+          />
+        </picture>
         <div class="p-4">
           <p class="text-sm text-gray-500">
             Foto de <a href="https://unsplash.com/@jeremybishop" class="underline">Jeremy Bishop</a> en Unsplash
@@ -33,11 +39,15 @@
         </div>
       </div>
       <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-        <img
-          class="w-full"
-          src="assets/city.jpg"
-          alt="Skyline de una ciudad al atardecer"
-        />
+        <picture>
+          <source srcset="assets/city.webp" type="image/webp">
+          <img
+            class="w-full"
+            src="assets/city.jpg"
+            alt="Skyline de una ciudad al atardecer"
+            loading="lazy"
+          />
+        </picture>
         <div class="p-4">
           <p class="text-sm text-gray-500">
             Foto de <a href="https://unsplash.com/@daniel_k_luby" class="underline">Daniel K. Luby</a> en Unsplash
@@ -45,11 +55,15 @@
         </div>
       </div>
       <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-        <img
-          class="w-full"
-          src="assets/mountain.jpg"
-          alt="Montañas cubiertas de nieve con un lago"
-        />
+        <picture>
+          <source srcset="assets/mountain.webp" type="image/webp">
+          <img
+            class="w-full"
+            src="assets/mountain.jpg"
+            alt="Montañas cubiertas de nieve con un lago"
+            loading="lazy"
+          />
+        </picture>
         <div class="p-4">
           <p class="text-sm text-gray-500">
             Foto de <a href="https://unsplash.com/@aaron_burden" class="underline">Aaron Burden</a> en Unsplash
@@ -68,7 +82,6 @@
       Este es un ejemplo de un componente que podría contener JavaScript que
       consume muchos recursos de forma innecesaria.
     </p>
-    <!-- Aquí podrías incluir un componente de terceros pesado -->
     <div
       class="bg-gray-100 p-8 rounded-lg text-center text-gray-600"
     >
@@ -90,12 +103,12 @@
           La siguiente imagen no tiene texto alternativo, lo cual afecta la
           accesibilidad para los usuarios con lectores de pantalla y el SEO.
         </p>
-        <!-- Esta imagen carecerá de 'alt' en la versión inicial -->
         <img
           class="mt-4 rounded-lg shadow-md"
           src="assets/flowers.jpg"
-          alt=""
+          alt="Un ramo de flores frescas y coloridas"
           style="width: 100%; max-width: 500px"
+          loading="lazy"
         />
       </div>
       <div>
@@ -104,17 +117,15 @@
         </h3>
         <p
           class="text-lg p-4 rounded-lg mt-2 font-bold"
-          style="background-color: #f7f7f7; color: #a0a0a0"
+          style="background-color: #f0f0f0; color: #404040"
         >
-          Este texto tiene un bajo contraste de color, lo que dificulta su
-          lectura.
+          Este texto ahora tiene un contraste de color adecuado.
         </p>
       </div>
     </div>
   </section>
   <section>
-    <div>
-      <app-contact></app-contact> 
-    </div>
+     <app-contact></app-contact>
   </section>
+  
 </main>

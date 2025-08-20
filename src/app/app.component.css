@@ -17,7 +17,19 @@ h2 {
   height: auto;
   display: block;
 }
-/* Ejemplo de CSS con selectores pesados */
-.grid > div:nth-child(2) > img {
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+.grid-item img {
+  max-width: 100%;
+  height: auto;
   border-radius: 8px;
 }
